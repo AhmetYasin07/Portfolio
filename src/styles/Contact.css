@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 92vh;
+    width: 100%;
+    background-color: #d3d3d3;
+    background-image: linear-gradient(315deg, #d3d3d3 0%, #57606f 74%);
+}
+
+.contact-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-family: 'Balsamiq Sans', cursive;
+}
+
+.contact-pageHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    height: 25%;   
+    color: #272727;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+.form-upper {
+    display: flex;
+}
+
+.form-item {
+    width: 100%;
+    height: 2.5rem;
+    border: none;
+    border-radius: 6px;
+    margin-top: 8px;
+    padding: 0 8px;
+    transition: 200ms;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-weight: inherit;
+    position: relative;
+}
+
+.form-item:focus {
+    box-shadow: 0px 0 8px 2px #57606f;    
+}
+
+.form-textarea{
+    padding: 12px 8px;
+    max-width: 100%;
+    max-height: 12rem;
+    min-width: 100%;
+    min-height: 8rem;
+    resize: none;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.form-submit{
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 6px;
+    border: none;
+    margin-left: auto;
+    margin-top: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+    transition: 200ms;
+    background-color: #2D2D2D;
+    color: white;
+    font-weight: inherit;
+}
+.form-submit:hover{
+    background-color: #414141;
+}
+
+.form-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    margin-right: 4rem;
+    margin-bottom: 6rem;
+}
+
+.form-desc-img{
+    width: 16rem;
+    height: 12rem;
+}
+
+@media (max-width: 1000px) {
+    .form-desc{
+        display: none;
+    }
+    .form{
+        width: 75%;
+    }
+}
+
+.form-desc-text{
+    max-width: 100%;
+    word-wrap: break-word;
+    font-size: 60%;
+    font-family: inherit;
+    opacity: 0.9;
+}
+
+.form-lower{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.successful-message{
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.3rem;
+    color: #0f5132; 
+    transition: 250ms;
+}
+.successful-message.active{
+    visibility: visible;
+    opacity: 1;
+}
+.unsuccessful-message{
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.3rem;
+    color: #ef5771; 
+    transition: 250ms;
+    position: absolute;
+    left: 0;
+}
+.unsuccessful-message.active{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+@keyframes opacity {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+@keyframes rightToLeft {
+    from {opacity: 0; margin-left: 8rem;}
+    to {opacity: 1; margin-left: 0rem;}
+  }
+@keyframes leftToRight {
+    from {opacity: 0; margin-right: 8rem;}
+    to {opacity: 1; margin-right: 4rem;}
+  }
+@keyframes topToDown {
+    from {opacity: 0; padding-bottom: 4rem;}
+    to {opacity: 1; padding-bottom: 0rem;}
+}
+
+.rightToLeft {
+    animation-name: rightToLeft;
+    animation-duration: 2s;
+}
+.leftToRight {
+    animation-name: leftToRight;
+    animation-duration: 2s;
+}
+.topToDown {
+    animation-name: topToDown;
+    animation-duration: 2s;
+}
+
+.opacity {
+    animation-name: opacity;
+    animation-duration: 2s;
+}
+
+@media (max-width: 400px) {
+    .contact {
+        height: 38rem;
+    }
+}

@@ -1,0 +1,210 @@
+.about-page {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: #d3d3d3;
+    background-image: linear-gradient(225deg, #d3d3d3 0%, #57606f 74%);
+    user-select: none;
+    padding: 0 6vw;
+}
+
+.profile-photo{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 30vw;
+    margin-top: 4rem;
+}
+.profile-photo-img{
+    border-radius: 2%;
+    height: 100%;
+    box-shadow: 0 0 24px 8px #57606f;
+}
+.profile-photo span{
+    font-size: 12px;
+    opacity: 0.9;
+}
+.profile-photo span a{
+    color: #272727;
+    transition: 250ms;
+    text-decoration: none;
+}
+.profile-photo span a:hover{
+    text-decoration: underline;
+}
+
+@keyframes profile-photo-animated {
+    0% {transform: scale3d(0, 0, 1) rotate(720deg);}
+    100% {transform: scale3d(1, 1, 1) rotate(0deg);;}
+}
+
+.profile-photo-animated {
+    animation-name: profile-photo-animated;
+    animation-duration: 750ms;
+}
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 5%;
+    color: #1B1B1B;
+}
+
+.about-me-header{
+    display: flex;
+    font-size: 3rem;
+    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+    color: #272727;
+}
+.about-me-text{
+    display: flex;
+    text-align: left;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.about-links {
+    display: flex;
+    margin-top: 1rem;
+    width: 100%;
+}
+.about-link {
+    display: flex;
+    flex-direction: column;
+    margin-right: 48px;
+    cursor: pointer;
+}
+
+.about-link-text {
+    font-size: 1.3rem;
+    text-align: left;
+    white-space: nowrap;
+    pointer-events: none;
+    font-weight: 500;
+}
+.about-link-bottom {
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: #414141;
+    opacity: 0.6;
+    pointer-events: none;
+    transition: 300ms;
+    -webkit-transition: 300ms;
+}
+
+.about-link:hover .about-link-bottom {
+    width: 50%;
+    opacity: 1;
+    background-color: #1b2845;
+}
+.about-link:hover .about-link-text {
+    background-color: #1b2845;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-link-active .about-link-bottom , .about-link-active:hover .about-link-bottom {
+    width: 100%;
+    opacity: 1;
+    background-color: #474747;
+    background-image: linear-gradient(315deg, #474747 0%, #1b2845 74%);
+}
+.about-link-active .about-link-text , .about-link-active:hover .about-link-text {
+    background-color: #474747;
+    background-image: linear-gradient(315deg, #474747 0%, #1b2845 74%);
+    background-clip: text;
+    color: transparent;
+}
+
+.about-content {
+    display: flex;
+    margin-top: 12px;
+    font-size: inherit;
+    height: 8rem;
+}
+
+.about-content-line {
+    display: flex;
+    margin-bottom: 6px;
+    white-space: nowrap;
+}
+.about-content-key {
+    display: flex;
+    font-weight: 500;
+}
+.about-content-value {
+    display: flex;
+    margin-left: 8px;
+}
+
+.about-link-content{
+    text-align: left;
+    margin: 0;
+    padding-left: 0px;
+    list-style: none;
+}
+.about-link-content li{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.about-link-content li svg{
+    display: flex;
+    margin-top: 4px;
+    font-size: 60%;
+    margin-right: 4px;
+}
+
+.about-link-content li a{
+    text-decoration: none;
+    color: #1b2845;
+    transition: 250ms;
+    -webkit-transition: 250ms;
+}
+.about-link-content li a:hover{
+    color: #313e58;
+}
+
+.about-link-icon{
+    margin: 0 0 -6px 8px !important;
+    height: 24px;
+    font-size: 100% !important;
+}
+
+
+@media (max-width: 975px) {
+    .profile-photo{
+        display: none;
+    }
+    
+}
+@media (max-width: 750px) {
+    #social_media {
+        display: none;
+    }
+    
+}
+@media (max-width: 450px) {
+    .about-me-header{
+        font-size: 2.5rem;
+    }
+    .about-me-text{
+        font-size: 1.1rem;
+    }
+    
+    .about-links {
+        width: 100%;
+    }
+    .about-link-text {
+        font-size: 1.1rem;
+    }
+    .about-link {
+        margin-right: 24px;
+    }
+}

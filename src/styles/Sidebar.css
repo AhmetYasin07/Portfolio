@@ -1,0 +1,90 @@
+.sidebar {
+    position: fixed;
+    height: 0%;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    transition: 300ms;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.sidebar-back {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 8;
+    background-color: black;
+    position: fixed;
+    right: 0;
+    top: 0;
+    visibility: hidden;
+    transition: 300ms;
+}
+
+.sidebar-back.active {
+    opacity: 0.9;
+    visibility: visible;
+}
+
+.sidebar.active {
+    height: 100%;
+}
+
+.sidebar-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.sidebar .sidebar-items {
+    visibility: hidden;
+}
+.sidebar.active .sidebar-items {
+    visibility: visible;
+    padding-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+.sidebar-item {
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: inherit;
+    width: 5rem;
+    height: 15%;
+    align-items: center;
+    outline: none;
+    transition: 250ms;
+    user-select: none;
+    pointer-events: all;
+}
+.sidebar-item:hover {
+    color: #6f808f;
+}
+.sidebar-item-active{
+    color: #6f808f;
+}
+
+.sidebar-item-text{
+    margin-top: 20px;
+    pointer-events: none;
+}
+
+@media (min-width: 800px) {
+    .sidebar.active {
+        height: 0%;
+    }
+    .sidebar-back.active {
+        opacity: 0;
+    }
+}

@@ -1,0 +1,76 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    background-color: transparent;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    background-color: transparent;
+    padding: 2rem 2rem 0 2rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 56px;
+    border-radius: 100%;
+    cursor: pointer;
+    color: #141414;
+    transition: 400ms;
+    font-size: 2.5rem;
+}
+.carousel-arrow:hover {
+    color: #4e4e4e;
+}
+
+.carousel-arrow.right {
+    margin-left: auto;
+}
+
+.carousel-slider {
+    display: flex;
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    transition: 500ms;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 100%;
+}
+
+.dot {
+    display: flex;
+    width: 12px;
+    height: 12px;
+    background-color: rgb(197, 197, 197);
+    margin: 0 8px;
+    margin-top: 6px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+}
