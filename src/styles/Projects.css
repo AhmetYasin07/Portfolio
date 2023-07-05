@@ -58,7 +58,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 50%;
+    height: 42%;
     padding: 8px 8px 0px 8px;
 }
 
@@ -76,6 +76,14 @@
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', Arial, Helvetica, sans-serif;
     color: #dce1eb;
     height: 100%;
+    overflow-y: auto;
+    padding-right: 4px;
+}
+.project-card-desc p::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 8px;
+    background-color: #d3d3d3;
+    background-image: linear-gradient(315deg, #d3d3d3 0%, #57606f 74%);
 }
 .project-card-desc div {
     display: flex;
