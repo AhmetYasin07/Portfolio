@@ -137,6 +137,9 @@
         height: 80%;
         width: 110%;
     }
+    .project-card-desc {
+        height: 52%;
+    }
 }
 @media (max-width: 400px) {
     .projects {
