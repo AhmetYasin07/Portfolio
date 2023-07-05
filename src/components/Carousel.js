@@ -49,8 +49,8 @@ const Carousel = (props) => {
         .getComputedStyle(ReactDOM.findDOMNode(element))
         .getPropertyValue("min-width")
         .replace(/%/g, "");
-    if (scrollCarousel + 100 / length > 0) {
-      if (scrollCarousel + 100 / length > 1) {
+    if (Math.floor(scrollCarousel + 100 / length > 0)) {
+      if (Math.floor(scrollCarousel + 100 / length > 1)) {
         setScrollCarousel(-((length - elementWidth) * (100 / length)));
         return;
       }
@@ -69,8 +69,8 @@ const Carousel = (props) => {
         .getPropertyValue("min-width")
         .replace(/%/g, "");
     if (
-      scrollCarousel - 100 / length <
-      -((length - elementWidth) * (100 / length))
+      Math.floor(scrollCarousel - 100 / length) <
+      Math.floor(-(length - elementWidth) * (100 / length))
     ) {
       setScrollCarousel(0);
       return;
@@ -89,7 +89,8 @@ const Carousel = (props) => {
       <div id="carousel" className="carousel-wrapper">
         <div
           onClick={(e) => handleScrollLeft(e)}
-          onPointerEnter={e => props.setIsElementHovered(true)} onPointerLeave={e => props.setIsElementHovered(false)}
+          onPointerEnter={(e) => props.setIsElementHovered(true)}
+          onPointerLeave={(e) => props.setIsElementHovered(false)}
           className="carousel-arrow left"
         >
           <FaAngleLeft />
@@ -109,7 +110,8 @@ const Carousel = (props) => {
         </div>
         <div
           onClick={(e) => handleScrollRight(e)}
-          onPointerEnter={e => props.setIsElementHovered(true)} onPointerLeave={e => props.setIsElementHovered(false)}
+          onPointerEnter={(e) => props.setIsElementHovered(true)}
+          onPointerLeave={(e) => props.setIsElementHovered(false)}
           id="carousel-auto-button"
           className="carousel-arrow right"
         >
@@ -121,7 +123,7 @@ const Carousel = (props) => {
           const element = carouselItems?.current;
           const length = element?.childElementCount;
           const elementWidth = element
-            ? Math.ceil(
+            ? Math.floor(
                 (length * 100) /
                   window
                     .getComputedStyle(ReactDOM.findDOMNode(element))
@@ -129,8 +131,8 @@ const Carousel = (props) => {
                     .replace(/%/g, "")
               )
             : null;
-          const isDotActive = Math.ceil(
-            Math.abs(scrollCarousel) / (100 / length)
+          const isDotActive = Math.floor(
+            Math.floor(Math.abs(scrollCarousel)) / Math.floor(100 / length)
           );
           const dots = [];
           for (let i = 0; i < length - (elementWidth - 1); i++) {
