@@ -12,6 +12,16 @@ const Projects = () => {
             <div className="project-cards">
                 <Carousel isElementHovered={isElementHovered} setIsElementHovered={setIsElementHovered}>
                     <div onPointerEnter={e => setIsElementHovered(true)} onPointerLeave={e => setIsElementHovered(false)} className="project-card">
+                        <img src="vialess.png" className="project-card-img" alt="" />
+                        <div className="project-card-desc">
+                            <span>Vialess</span>
+                            <p>A new generation supply and connection network project that eliminates the digital and real intermediaries in which we were involved in the technical and bussines part, from the office and remotely, with my teammate for 5 months.</p>
+                            <div>
+                            <a target="_blank" rel="noreferrer" href="https://vialesss.web.app/"><FaLink/><span>Web Link</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div onPointerEnter={e => setIsElementHovered(true)} onPointerLeave={e => setIsElementHovered(false)} className="project-card">
                         <img src="youtline.png" className="project-card-img" alt="" />
                         <div className="project-card-desc">
                             <span>Youtline</span>
