@@ -10,7 +10,7 @@ const Projects = () => {
         <div id="projects" className="projects">
             <div className="projects-header">My Projects</div>
             <div className="project-cards">
-                <Carousel isElementHovered={isElementHovered}>
+                <Carousel isElementHovered={isElementHovered} setIsElementHovered={setIsElementHovered}>
                     <div onPointerEnter={e => setIsElementHovered(true)} onPointerLeave={e => setIsElementHovered(false)} className="project-card">
                         <img src="youtline.png" className="project-card-img" alt="" />
                         <div className="project-card-desc">
