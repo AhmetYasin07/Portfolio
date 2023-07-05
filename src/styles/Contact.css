@@ -73,7 +73,6 @@
     border-radius: 6px;
     border: none;
     margin-left: auto;
-    margin-top: 1rem;
     font-family: inherit;
     cursor: pointer;
     transition: 200ms;
@@ -121,6 +120,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    width: 100%;
 }
 
 .successful-message{
@@ -138,7 +138,7 @@
     visibility: hidden;
     opacity: 0;
     font-size: 1.3rem;
-    color: #ef5771; 
+    color: #c42e48; 
     transition: 250ms;
     position: absolute;
     left: 0;
