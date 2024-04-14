@@ -9,7 +9,6 @@ import Projects from "./components/Projects";
 import Services from "./components/Services";
 import Sidebar from "./components/Sidebar";
 import ScrollToTop from "./components/ScrollToTop";
-import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function App() {
@@ -53,7 +52,6 @@ function App() {
         <Contact />
         <Footer />
         <ScrollToTop />
-        <Analytics />
         <SpeedInsights />
       </header>
     </div>
